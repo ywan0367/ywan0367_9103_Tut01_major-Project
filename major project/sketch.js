@@ -24,7 +24,12 @@ function setup() {
   angle=0;
   number=1;
 }
-    
+
+//Add mouse monitoring, if clicked, reload 
+function mousePressed(){
+  setup();
+}
+
 function draw() {
   background(255);
   noLoop()
