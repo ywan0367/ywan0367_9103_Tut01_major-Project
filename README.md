@@ -22,4 +22,4 @@ let angle=0;
 let number=1;
 
 ```
-This section declares various global arrays and variables for storing the generated element data and controlling the state of different graphs.
+- This section declares various global arrays and variables for storing the generated element data and controlling the state of different graphs.
