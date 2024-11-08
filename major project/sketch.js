@@ -80,7 +80,6 @@ function drawRandomLines(){
  }
 }
 
-
 //Generate red, blue and gray squares that appear in different positions each time they refresh
 //Some fixed squares, representing objects（such as some buildings) that don't change
 
@@ -102,6 +101,8 @@ function drawfixedRects(){
 //Random rects, representing objects that change over time
 
 function randomRect(){
+  // init randomRectList
+  if(randomRectList.length===0){
   let size = min(windowWidth, windowHeight);
   let colors = [
     [239,17,17], //red
@@ -158,10 +159,16 @@ function randomRect(){
     }
 
     let color = random(colors);
-    fill(color);
-    noStroke();
-    rect(x,y,rectSize, rectSize);
+    randomRectList.push([x,y,rectSize, rectSize,color]);
+    
   }
+}else{ //display randomRectList
+   for(let rectx of randomRectList){ 
+    fill(rectx[4]);
+    noStroke();
+    rect(rectx[0], rectx[1], rectx[2], rectx[3]);
+  }
+ }
 }
 
 // The function of drawing fixed yellow lines with three-color squares on it
