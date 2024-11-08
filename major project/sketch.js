@@ -31,7 +31,7 @@ function setup() {
 function mousePressed(){
   setup();
 }
-// set interval to change number and draw again;
+// set interval to change number and draw again
 let timer= setInterval(()=>{
   number++;
   draw();
