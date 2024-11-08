@@ -1,5 +1,28 @@
+//Declare global variables
+let yPositions=[];
+let xPositions=[];
+let randomRectList=[]
+let colouredHorizontalRoad1=[];
+let colouredHorizontalRoad2=[];
+let colouredVerticalRoad1=[];
+let colouredVerticalRoad2=[];
+let colouredVerticalRoad3=[];
+let rotatingRectsList=[]
+let angle=0;
+let number=1;
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  yPositions=[];
+  xPositions=[];
+  randomRectList=[]
+  colouredHorizontalRoad1=[];
+  colouredHorizontalRoad2=[];
+  colouredVerticalRoad1=[];
+  colouredVerticalRoad2=[];
+  colouredVerticalRoad3=[];
+  rotatingRectsList=[]
+  angle=0;
+  number=1;
 }
     
 function draw() {
