@@ -38,15 +38,14 @@ let timer= setInterval(()=>{
 
 function draw() {
   background(255);
-  noLoop()
-  drawRandomLines()
-  drawfixedRects();
-  randomRect();
-  drawColouredHorizontalRoad(min(width, height) / 40 * 21);
-  drawColouredVerticalRoad(min(width, height) / 40 * 1);
-  drawColouredVerticalRoad(min(width, height) / 40 * 23);
-  drawColouredHorizontalRoad(min(width, height) / 40 * 15);
-  drawColouredVerticalRoad(min(width, height) / 40 * 13);
+  drawRandomLines();
+  if(number>1) drawfixedRects();
+  if(number>2) randomRect();
+  if(number>3) drawColouredHorizontalRoad(min(width, height) / 40 * 21,colouredHorizontalRoad1);
+  if(number>4) drawColouredHorizontalRoad(min(width, height) / 40 * 15,colouredHorizontalRoad2);
+  if(number>5) drawColouredVerticalRoad(min(width, height) / 40 * 1,colouredVerticalRoad1);
+  if(number>6) drawColouredVerticalRoad(min(width, height) / 40 * 23,colouredVerticalRoad2);
+  if(number>7) drawColouredVerticalRoad(min(width, height) / 40 * 13,colouredVerticalRoad3);
 }
 
 function drawRandomLines(){
