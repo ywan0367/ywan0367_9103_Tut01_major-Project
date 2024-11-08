@@ -10,6 +10,7 @@ let colouredVerticalRoad3=[];
 let rotatingRectsList=[]
 let angle=0;
 let number=1;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   yPositions=[];
