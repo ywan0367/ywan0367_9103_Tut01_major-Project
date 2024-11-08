@@ -222,5 +222,6 @@ function drawColouredVerticalRoad(x){
 }
 
 function windowResized() {
+  setup();
   resizeCanvas(windowWidth, windowHeight);
 }
