@@ -23,12 +23,18 @@ function setup() {
   rotatingRectsList=[]
   angle=0;
   number=1;
+  draw();
 }
 
 //Add mouse monitoring, if clicked, reload 
 function mousePressed(){
   setup();
 }
+// set interval to change number and draw again;
+let timer= setInterval(()=>{
+  number++;
+  draw();
+},1000);
 
 function draw() {
   background(255);
