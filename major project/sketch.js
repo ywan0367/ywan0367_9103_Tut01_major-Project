@@ -39,6 +39,7 @@ let timer= setInterval(()=>{
 function draw() {
   background(255);
   drawRandomLines();
+  //generate the parts step by step
   if(number>1) drawfixedRects();
   if(number>2) randomRect();
   if(number>3) drawColouredHorizontalRoad(min(width, height) / 40 * 21,colouredHorizontalRoad1);
@@ -53,26 +54,30 @@ function drawRandomLines(){
   stroke(252, 224, 46);
   strokeWeight(15);
   let size = min(windowWidth, windowHeight);
-  let yPositions = [0, size];
+  // the xPosition and Y position has been declare as variables
+  //so it will not be randomly generated again, only if the page is reloaded
+  if(yPositions.length===0){
+  yPositions = [0, size];
   for (let i = 0; i < 5; i++){
     yPositions.push(random(50, size - 50));
   }
   yPositions.sort((a,b) => a-b);
-
-  for (let y of yPositions ){
+  }else{
+   for (let y of yPositions ){
     line(0, y, size, y);
+   }
   }
-
-  let xPositions = [0, size];
+  if(xPositions.length===0){ 
+    xPositions = [0, size];
   for (let j = 0; j < 5; j++){
     xPositions.push(random(50, size - 30));
   }
   xPositions.sort((a,b) => a-b);
-
+  }else{
   for (let x of xPositions ){
       line(x, 0, x, size);
   }
-
+ }
 }
 
 
